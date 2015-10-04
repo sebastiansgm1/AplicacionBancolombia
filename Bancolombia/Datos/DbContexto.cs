@@ -19,7 +19,7 @@ namespace Datos
         {
             get
             {
-                return this.GetTable<TablaUsuario>
+                return this.GetTable<TablaUsuario>();
             }
         }
     }

@@ -12,51 +12,39 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
+    <ScrollViewer x:Name="ContendGrid" Grid.Row="1" VerticalScrollBarVisibility="Auto" Height="756" Width="480">
+        <StackPanel x:Name="StackPanel" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="480" Background="White">
 
-    <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+            <Grid Height="762" Width="458" ShowGridLines="False" x:Name="Grid1">
 
-        <!-- NOTA PARA LA TRADUCCIÓN:
-            Para traducir las cadenas mostradas, copia sus valores a las claves con el nombre
-            correspondiente en el archivo de recursos del idioma neutro (AppResources.resx) de la aplicación y
-            reemplaza el valor de texto codificado de forma rígida entre las comillas de los atributos
-            con la cláusula de enlace cuya ruta de acceso apunte a ese nombre de cadena.
+                <Grid.RowDefinitions>
 
-            Por ejemplo:
+                    <RowDefinition Height="64"/>
 
-                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
+                    <RowDefinition Height="698"/>
 
-            Este enlace apunta al recurso de cadena de la plantilla denominado "ApplicationTitle".
+                </Grid.RowDefinitions>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="10,0,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="448" Source="/Images/BarraSuperior.jpg"/>
+                <TextBox x:Name="TxtUsuario" HorizontalAlignment="Left" Height="97" Margin="10,69,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="438">
+                    <TextBox.Background>
+                        <ImageBrush ImageSource="/Images/CampoTexto.jpg"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Button x:Name="BtnContinuar" Content="" HorizontalAlignment="Left" Margin="100,191,0,0" Grid.Row="1" VerticalAlignment="Top" Width="267" Height="97">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Images/BotonContinuar.jpg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+                <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="0,316,0,0" Grid.Row="1" VerticalAlignment="Top" Width="458" Source="/Images/ImagenCentro.jpg" Stretch="Fill"/>
+                <Image x:Name="image2" HorizontalAlignment="Left" Height="100" Margin="10,588,0,0" Grid.Row="1" VerticalAlignment="Top" Width="438" Source="/Images/BarraInferior.jpg"/>
+                <HyperlinkButton x:Name="InformacionLegal" Content="Información Legal" HorizontalAlignment="Left" Margin="182,160,0,0" Grid.Row="1" VerticalAlignment="Top" Width="244" Click="HyperlinkButton_Click" Background="{x:Null}" Foreground="#FF052593"/>
 
-            Al agregar idiomas admitidos en la pestaña Propiedades del proyecto se creará un
-            nuevo archivo resx por idioma que puede contener los valores traducidos de las
-            cadenas de la interfaz de usuario. El enlace de estos ejemplos hará que el valor de los atributos
-            se tome del archivo .resx correspondiente al valor de
-            CurrentUICulture de la aplicación en tiempo de ejecución.
-         -->
 
-        <!--TitlePanel contiene el nombre de la aplicación y el título de la página-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MI APLICACIÓN" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="nombre de la página" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+
+
+            </Grid>
         </StackPanel>
-
-        <!--ContentPanel. Colocar aquí el contenido adicional-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-
-        </Grid>
-
-        <!--Quitar la marca de comentarios para ver una cuadrícula de alineación que
-            ayuda a comprobar que los controles están alineados en los límites normales.  La imagen tiene un margen superior de -32px para
-            tener en cuenta la bandeja del sistema. Establécelo en 0 (o quite el margen)
-            si la bandeja del sistema está oculta.
-
-            Antes de enviarla, quita este código XAML y la propia imagen.-->
-        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
-    </Grid>
+    </ScrollViewer>
+    <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
 
 </phone:PhoneApplicationPage>

@@ -22,6 +22,11 @@ namespace Bancolombia
             //BuildLocalizedApplicationBar();
         }
 
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         // Código de ejemplo para compilar una ApplicationBar traducida
         //private void BuildLocalizedApplicationBar()
         //{
