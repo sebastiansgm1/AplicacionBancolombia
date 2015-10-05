@@ -8,6 +8,11 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Bancolombia.Resources;
+using Datos;
+using Entidades.Maestros;
+using System.IO.IsolatedStorage;
+using Maestros.Fachada;
+
 
 namespace Bancolombia
 {
@@ -20,11 +25,31 @@ namespace Bancolombia
 
             // Código de ejemplo para traducir ApplicationBar
             //BuildLocalizedApplicationBar();
+
+            using (DbContexto contexto = new DbContexto("Data Source='isostore:/BancolombiaDb.sdf'"))
+            {
+                if(!contexto.DatabaseExists())
+                {
+                    contexto.CreateDatabase();
+                    contexto.SubmitChanges();
+                }
+            }
+
         }
 
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/InformacionLegal/InformacionLegal.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void Registrar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnContinuar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         // Código de ejemplo para compilar una ApplicationBar traducida

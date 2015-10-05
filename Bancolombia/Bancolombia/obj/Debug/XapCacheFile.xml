@@ -1,6 +1,6 @@
-﻿<xapCache source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\Bin\Debug\Bancolombia_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="04/10/2015 7:06:53 p. m.">
+﻿<xapCache source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\Bin\Debug\Bancolombia_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="04/10/2015 7:12:31 p. m.">
   <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="04/10/2015 7:00:17 p. m." />
-  <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\obj\Debug\Bancolombia.dll" archivePath="Bancolombia.dll" lastWriteTime="04/10/2015 7:06:52 p. m." />
+  <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\obj\Debug\Bancolombia.dll" archivePath="Bancolombia.dll" lastWriteTime="04/10/2015 7:12:31 p. m." />
   <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="04/10/2015 3:29:05 p. m." />
   <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\Assets\BadgeLogo.png" archivePath="Assets\BadgeLogo.png" lastWriteTime="04/10/2015 3:29:05 p. m." />
   <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\Assets\Logo.png" archivePath="Assets\Logo.png" lastWriteTime="04/10/2015 3:29:05 p. m." />
@@ -24,6 +24,6 @@
   <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="04/10/2015 3:29:05 p. m." />
   <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="04/10/2015 3:29:05 p. m." />
   <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="04/10/2015 3:30:23 p. m." />
-  <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="04/10/2015 7:06:53 p. m." />
+  <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="04/10/2015 7:12:31 p. m." />
   <file source="D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="04/10/2015 7:00:17 p. m." />
 </xapCache>
