@@ -15,6 +15,13 @@
     <File>Assets\Tiles\FlipCycleTileSmall.png</File>
     <File>Assets\Tiles\IconicTileMediumLarge.png</File>
     <File>Assets\Tiles\IconicTileSmall.png</File>
+    <File>Images\BarraInferior.jpg</File>
+    <File>Images\Barrainflegal.jpg</File>
+    <File>Images\BarraSuperior.jpg</File>
+    <File>Images\BotonAtras.jpg</File>
+    <File>Images\BotonContinuar.jpg</File>
+    <File>Images\CampoTexto.jpg</File>
+    <File>Images\ImagenCentro.jpg</File>
     <File>AppManifest.xaml</File>
     <File>Assets\ApplicationIcon.png</File>
     <File>Assets\Tiles\FlipCycleTileMedium.png</File>

@@ -24,7 +24,7 @@ namespace Bancolombia
 
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("/InformacionLegal/InformacionLegal.xaml", UriKind.RelativeOrAbsolute));
         }
 
         // Código de ejemplo para compilar una ApplicationBar traducida

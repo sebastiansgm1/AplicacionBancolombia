@@ -1,1 +1,1 @@
-D:\Universidad\Software 5\Bancolombia\Bancolombia\Bancolombia.csproj;neutral
+D:\Universidad\Software 5\GitHub\Bancolombia\Bancolombia\Bancolombia.csproj;neutral
