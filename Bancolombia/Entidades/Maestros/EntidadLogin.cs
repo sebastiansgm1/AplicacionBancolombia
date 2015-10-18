@@ -22,6 +22,10 @@ namespace Entidades.Maestros
         /// </summary>
         private string _NombreUsuario;
 
+        /// <summary>
+        /// Corresponde al saldo que posee el usuario
+        /// </summary>
+        //private float _Saldo;
 
         #endregion
 
@@ -51,6 +55,17 @@ namespace Entidades.Maestros
             }
         }
 
+        /*public float Saldo
+        {
+            get
+            {
+                return _Saldo;
+            }
+            set
+            {
+                _Saldo = value;
+            }
+        }*/
         #endregion
     }
 }

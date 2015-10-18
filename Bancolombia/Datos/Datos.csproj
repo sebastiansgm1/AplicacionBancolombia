@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="DbContexto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TablaProducto.cs" />
     <Compile Include="TablaUsuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

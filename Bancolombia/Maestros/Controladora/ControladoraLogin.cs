@@ -43,6 +43,23 @@ namespace Maestros.Controladora
             return retorno;
         }
 
+        public static int Grabar(EntidadLogin objusuarios)
+        {
+            int retorno = 0;
+            try
+            {
+                if (objusuarios.CuentaUsuario.ToString().Length <= 4)
+                {
+                    retorno = BrokerLogin.Grabar(objusuarios);
+                }
+            }
+            catch(Exception ex)
+            {
+                throw (ex);
+            }
+            return retorno;
+        }
+
         #endregion
 
     }

@@ -32,7 +32,7 @@ namespace Maestros.Broker
 
             using (DbContexto contexto = new DbContexto("Data Source='isostore:/BancolombiaDb.sdf'"))
             {
-
+                
                 var query = from TablaTmpUsuario in contexto.Usuarios.ToList()
                             orderby TablaTmpUsuario.NombreUsuario
                             where TablaTmpUsuario.NombreUsuario == objusuarios.NombreUsuario
@@ -53,6 +53,40 @@ namespace Maestros.Broker
             }
             return valor;
         }
+
+        public static int Grabar(EntidadLogin objusuarios)
+        {
+            int valor = 0;
+
+            using (DbContexto contexto = new DbContexto("Data Source = 'isostore:/BancolombiaDb.sdf'"))
+            {
+                var query = from TablaTmpUsuario in contexto.Usuarios.ToList() // TablaTmpUsuario Es una tabla de tipo contexto.Usuarios 
+                            orderby TablaTmpUsuario.Cuenta
+                            where TablaTmpUsuario.NombreUsuario == objusuarios.NombreUsuario
+                            select TablaTmpUsuario.NombreUsuario;
+                if (query.ToList().Count > 0)
+                {
+                    valor = 2;
+                }
+                else
+                {
+                    List<TablaUsuario> TablaTmpUsuario = new List<TablaUsuario>()
+                    {
+                        new TablaUsuario()
+                        {
+                            NombreUsuario=objusuarios.NombreUsuario//, Saldo=objusuarios.Saldo
+                        }
+                    };
+                    valor = 1;
+                    contexto.Usuarios.InsertAllOnSubmit(TablaTmpUsuario);
+                    contexto.SubmitChanges();
+                }
+
+            }
+            return valor;
+        }
+
+
         #endregion
 
 

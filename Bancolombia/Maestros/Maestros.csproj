@@ -84,8 +84,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Broker\BrokerLogin.cs" />
+    <Compile Include="Broker\BrokerRegistro.cs" />
     <Compile Include="Controladora\ControladoraLogin.cs" />
+    <Compile Include="Controladora\ControladoraRegistro.cs" />
     <Compile Include="Fachada\FachadaLogin.cs" />
+    <Compile Include="Fachada\FachadaRegistro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -33,7 +33,20 @@ namespace Maestros.Fachada
         }
 
 
-
+        public static int Grabar(EntidadLogin objusuarios)
+        {
+            int retorno = 0;
+            try
+            {
+                retorno = ControladoraLogin.Grabar(objusuarios);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+            return retorno;
+        }
+        
         #endregion
 
     }

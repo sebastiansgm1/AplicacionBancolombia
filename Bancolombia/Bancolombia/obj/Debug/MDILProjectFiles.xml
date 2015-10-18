@@ -19,12 +19,34 @@
     <File>Images\Barrainflegal.jpg</File>
     <File>Images\BarraSuperior.jpg</File>
     <File>Images\BotonAtras.jpg</File>
+    <File>Images\BotonC.jpg</File>
+    <File>Images\BotonConsultar.jpg</File>
     <File>Images\BotonContinuar.jpg</File>
+    <File>Images\BotonE.jpg</File>
+    <File>Images\BotonEliminar.jpg</File>
+    <File>Images\BotonG.jpg</File>
+    <File>Images\BotonGuardar.jpg</File>
+    <File>Images\BotonL.jpg</File>
+    <File>Images\BotonM.jpg</File>
+    <File>Images\BotonProductos.jpg</File>
+    <File>Images\BotonRegistrarctas.jpg</File>
     <File>Images\CampoTexto.jpg</File>
+    <File>Images\CampoTextocta.jpg</File>
+    <File>Images\CampoTextoVacio.jpg</File>
     <File>Images\ImagenCentro.jpg</File>
+    <File>README_FIRST.txt</File>
+    <File>Toolkit.Content\ApplicationBar.Add.png</File>
+    <File>Toolkit.Content\ApplicationBar.Cancel.png</File>
+    <File>Toolkit.Content\ApplicationBar.Check.png</File>
+    <File>Toolkit.Content\ApplicationBar.Delete.png</File>
+    <File>Toolkit.Content\ApplicationBar.Select.png</File>
     <File>AppManifest.xaml</File>
     <File>Assets\ApplicationIcon.png</File>
     <File>Assets\Tiles\FlipCycleTileMedium.png</File>
+    <File>Datos.dll</File>
+    <File>Entidades.dll</File>
+    <File>Maestros.dll</File>
+    <File>Microsoft.Phone.Controls.Toolkit.dll</File>
     <File>WMAppManifest.xml</File>
     <File>AppxManifest.xml</File>
   </XAPFiles>

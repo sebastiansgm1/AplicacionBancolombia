@@ -1,0 +1,83 @@
+﻿<phone:PhoneApplicationPage xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" 
+    x:Class="Bancolombia.Opciones.RegistrarCuenta"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
+    <ScrollViewer x:Name="ContendGrid" Grid.Row="1" VerticalScrollBarVisibility="Auto" Height="756" Width="480">
+        <StackPanel x:Name="StackPanel" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="480" Background="White">
+            <Grid Height="762" Width="458" ShowGridLines="False" x:Name="Grid1" Margin="11,0" RenderTransformOrigin="0.508,0.586">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="64"/>
+
+                    <RowDefinition Height="698"/>
+
+                </Grid.RowDefinitions>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="10,0,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="448" Source="/Images/BarraSuperior.jpg"/>
+                <Button x:Name="BtnAtras" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="108" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="BtnAtras_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="/Images/BotonAtras.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBox x:Name="TxtCuenta" MaxLength="11" HorizontalAlignment="Left" Height="97" Margin="10,69,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="438" TextAlignment="Center" >
+                    <TextBox.Background>
+                        <ImageBrush ImageSource="/Images/CampoTextocta.jpg"/>
+                    </TextBox.Background>
+                    <TextBox.InputScope>
+                        <InputScope>
+                            <InputScopeName NameValue="Number" />
+                        </InputScope>
+                    </TextBox.InputScope>
+                </TextBox>
+                <TextBlock x:Name="TxtSaldo" Margin="123,492,119,148" Foreground="Black" Grid.Row="1" Text="Saldo: $" FontSize="24"/>
+                <RadioButton GroupName="Cuenta" x:Name="Ahorros" Margin="10,252,14,370" Background="#FFFFF9F9" BorderBrush="Black" Foreground="Black" Grid.Row="1" Checked="RadioButton_Checked">
+                    <TextBlock Text="Cuenta Ahorros" Foreground="#FF0A0909"/>
+                </RadioButton>
+                <RadioButton GroupName="Cuenta" x:Name="Corriente" Margin="14,333,10,291" Background="#FFF9F4F4" BorderBrush="#FF080808" Foreground="#FF0E0D0D" Grid.Row="1" Checked="RadioButton_Checked">
+                    <TextBlock Text="Cuenta Corriente" Foreground="#FF0A0909"/>
+                </RadioButton>
+                <TextBlock x:Name="TxtProducto" Margin="10,412,14,237" Foreground="Black" Grid.Row="1" RenderTransformOrigin="0.463,0.718" />
+                <TextBlock Text="Tipo de Cuenta:" Margin="10,198,14,451" Foreground="Black" Grid.Row="1" RenderTransformOrigin="0.463,0.718" />
+                <Button x:Name="BtnGuardar" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="108" Click="BtnGuardar_Click" Margin="10,624,0,0" Grid.Row="1">
+                    <Button.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="/Images/BotonG.jpg"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BtnModificar" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="108" Click="BtnModificar_Click" Margin="123,624,0,0" Grid.Row="1">
+                    <Button.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="/Images/BotonM.jpg"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BtnEliminar" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="108" Click="BtnEliminar_Click" Margin="231,624,0,0" Grid.Row="1">
+                    <Button.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="/Images/BotonE.jpg"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BtnConsultar" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="108" Click="BtnConsultar_Click" Margin="350,624,0,0" Grid.Row="1">
+                    <Button.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="/Images/BotonC.jpg"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="108" Click="BtnLimpiar_Click" Margin="175,555,0,0" Grid.Row="1">
+                    <Button.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="/Images/BotonL.jpg"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+        </StackPanel>
+    </ScrollViewer>
+
+</phone:PhoneApplicationPage>

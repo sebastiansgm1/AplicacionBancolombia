@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Bancolombia.Registro.Registro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    <ScrollViewer x:Name="ContendGrid" Grid.Row="1" VerticalScrollBarVisibility="Auto" Height="756" Width="480">
+        <StackPanel x:Name="StackPanel" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="480" Background="White">
+
+            <Grid Height="762" Width="458" ShowGridLines="False" x:Name="Grid1">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="64"/>
+
+                    <RowDefinition Height="698"/>
+
+                </Grid.RowDefinitions>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="10,0,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="448" Source="/Images/BarraSuperior.jpg"/>
+                <TextBlock Text="Registro de Cliente" Margin="145,36,146,629" Grid.Row="1" Foreground="#FF080500" />
+                <Button x:Name="BtnAtras" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="108" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="BtnAtras_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="/Images/BotonAtras.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBox x:Name="TxtUsuario" HorizontalAlignment="Left" Height="97" Margin="10,69,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="438" MaxLength="4" TextAlignment="Center">
+                    <TextBox.Background>
+                        <ImageBrush ImageSource="/Images/CampoTexto.jpg"/>
+                    </TextBox.Background>
+                    <TextBox.InputScope>
+                        <InputScope>
+                            <InputScopeName NameValue="AlphanumericFullWidth" />
+                        </InputScope>
+                    </TextBox.InputScope>
+                </TextBox>
+
+                <Button x:Name="BtnGuardar"  HorizontalAlignment="Left" Margin="100,191,0,0" Grid.Row="1" VerticalAlignment="Top" Width="267" Height="97" Click="BtnGuardar_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Images/BotonGuardar.jpg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BtnConsultar"  HorizontalAlignment="Left" Margin="100,333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="267" Height="97" Click="BtnConsultar_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Images/BotonConsultar.jpg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BtnEliminar"  HorizontalAlignment="Left" Margin="100,467,0,0" Grid.Row="1" VerticalAlignment="Top" Width="267" Height="97" Click="BtnEliminar_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Images/BotonEliminar.jpg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+
+
+
+            </Grid>
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="TextBlock"/>
+
+        </StackPanel>
+    </ScrollViewer>
+
+</phone:PhoneApplicationPage>

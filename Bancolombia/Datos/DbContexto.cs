@@ -22,5 +22,13 @@ namespace Datos
                 return this.GetTable<TablaUsuario>();
             }
         }
+
+        public Table<TablaProducto> Productos
+        {
+            get
+            {
+                return this.GetTable<TablaProducto>();
+            }
+        }
     }
 }

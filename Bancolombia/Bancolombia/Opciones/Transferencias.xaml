@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Bancolombia.Opciones.Transferencias"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
+    <ScrollViewer x:Name="ContendGrid" Grid.Row="1" VerticalScrollBarVisibility="Auto" Height="756" Width="480">
+        <StackPanel x:Name="StackPanel" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="480" Background="White">
+            <Grid Height="762" Width="458" ShowGridLines="False" x:Name="Grid1" Margin="11,0">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="64"/>
+
+                    <RowDefinition Height="698"/>
+
+                </Grid.RowDefinitions>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="10,0,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="448" Source="/Images/BarraSuperior.jpg"/>
+                <Button x:Name="BtnAtras" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="108" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="BtnAtras_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="/Images/BotonAtras.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock Text="Transferencias" Margin="14,36,10,613" Foreground="Black" Grid.Row="1" RenderTransformOrigin="0.463,0.718" />
+                <TextBlock x:Name="TxtCuentaOrigen"  Margin="18,144,6,505" Foreground="Black" Grid.Row="1" RenderTransformOrigin="0.463,0.718" TextAlignment="Center" />
+                <TextBlock Text="Cuenta de destino:" Margin="14,226,10,423" Foreground="Black" Grid.Row="1" RenderTransformOrigin="0.463,0.718" />
+                <TextBlock Text="Cuenta de Origen:" Margin="14,90,10,559" Foreground="Black" Grid.Row="1" RenderTransformOrigin="0.463,0.718" />
+                <TextBox x:Name="TxtCuenta" MaxLength="11" HorizontalAlignment="Left" Height="97" Margin="14,275,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="438" TextAlignment="Center" >
+                    <TextBox.Background>
+                        <ImageBrush ImageSource="/Images/CampoTextocta.jpg"/>
+                    </TextBox.Background>
+                    <TextBox.InputScope>
+                        <InputScope>
+                            <InputScopeName NameValue="Number" />
+                        </InputScope>
+                    </TextBox.InputScope>
+                </TextBox>
+                <TextBox x:Name="TxtValor" MaxLength="11" HorizontalAlignment="Left" Height="97" Margin="20,418,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="438" TextAlignment="Center" >
+                    <TextBox.Background>
+                        <ImageBrush ImageSource="/Images/CampoTextoVacio.jpg"/>
+                    </TextBox.Background>
+                    <TextBox.InputScope>
+                        <InputScope>
+                            <InputScopeName NameValue="Number" />
+                        </InputScope>
+                    </TextBox.InputScope>
+                </TextBox>
+                <TextBlock Text="Valor a transferir:" Margin="24,377,0,272" Foreground="Black" Grid.Row="1" RenderTransformOrigin="0.463,0.718" />
+                <Button x:Name="BtnTransferir"  HorizontalAlignment="Left" Margin="100,557,0,0" Grid.Row="1" VerticalAlignment="Top" Width="267" Height="97" Click="BtnTransferir_Click" RenderTransformOrigin="0.527,1.461">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Images/BotonTransferir.jpg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+        </StackPanel>
+    </ScrollViewer>
+
+</phone:PhoneApplicationPage>

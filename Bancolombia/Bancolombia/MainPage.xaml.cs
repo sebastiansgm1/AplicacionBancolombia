@@ -14,6 +14,7 @@ using System.IO.IsolatedStorage;
 using Maestros.Fachada;
 
 
+
 namespace Bancolombia
 {
     public partial class MainPage : PhoneApplicationPage
@@ -31,11 +32,22 @@ namespace Bancolombia
                 if(!contexto.DatabaseExists())
                 {
                     contexto.CreateDatabase();
+
+                    List<TablaUsuario> TablaTmpUsuario = new List<TablaUsuario>(){ // Clase Tabla usuario - un solo registro.... Construimos una lista con una posiciones 1,2,3 - Y la tablausuario la agrego en una posición ---- 
+                        new TablaUsuario()
+                        {
+                            NombreUsuario= "adm", //Saldo= 100000
+                        }
+                    };
+                    contexto.Usuarios.InsertAllOnSubmit(TablaTmpUsuario);
                     contexto.SubmitChanges();
+
+
                 }
             }
 
         }
+     
 
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
@@ -44,13 +56,30 @@ namespace Bancolombia
 
         private void Registrar_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("/Registro/Registro.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void BtnContinuar_Click(object sender, RoutedEventArgs e)
         {
-
+            if(TxtUsuario.Text != string.Empty)
+            {
+                EntidadLogin objusuarios = new EntidadLogin();
+                objusuarios.NombreUsuario = TxtUsuario.Text;
+                int retorno = FachadaLogin.Consultar(objusuarios);
+                if (retorno == 1 )
+                {
+                    string usr = TxtUsuario.Text;
+                    NavigationService.Navigate(new Uri("/Opciones/Opciones.xaml?Usuario=" + usr, UriKind.RelativeOrAbsolute));
+                }
+                else
+                {
+                    MessageBox.Show("El Usuario no existe el sistema lo llevara al registro");
+                    NavigationService.Navigate(new Uri("/Registro/Registro.xaml", UriKind.RelativeOrAbsolute));
+                }
+            }
         }
+
+        
 
         // Código de ejemplo para compilar una ApplicationBar traducida
         //private void BuildLocalizedApplicationBar()
